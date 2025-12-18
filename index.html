@@ -88,6 +88,7 @@
         }
         /* NAVIGATION - Day 1 (Alex)
            Git Command: git commit -m "Refine navbar labels" */
+        /* IMPROVED NAVBAR - Day 2 (Alex) */
         .navbar {
             background: white;
             padding: 1rem 2rem;
@@ -97,32 +98,39 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
-
+        
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
             color: #0066cc;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-
+        
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem;
+            flex-wrap: wrap;
         }
-
+        
         .nav-link {
             color: #333;
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 4px;
             transition: all 0.3s ease;
+            font-weight: 500;
         }
-
+        
         .nav-link:hover {
             background: #0066cc;
             color: white;
         }
+
         /* FOOTER - Day 1 (Sanya)
            Git Command: git commit -m "Update footer text" */
         .footer {
@@ -172,21 +180,93 @@
             color: #999;
             font-size: 0.9rem;
         }
+
+        /* COURSES SECTION - Day 2 (Alex - Feature Branch)
+           Git Command: git commit -m "Enhance header navbar and courses cards" */
+        .courses-section {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .course-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #dee2e6;
+            transition: transform 0.3s ease;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .course-image {
+            height: 160px;
+            background: linear-gradient(135deg, #0066cc, #0099cc);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+        }
+        
+        .course-content {
+            padding: 1.5rem;
+        }
+        
+        .course-category {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .course-title {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .course-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
     </style>
 </head>
 <body>
     <!-- NAVIGATION - Day 1 (Alex)
          Git Command: git commit -m "Refine navbar labels" -->
+   <!-- IMPROVED NAVBAR - Day 2 (Alex)
+         Git Command: git commit -m "Enhance header navbar and courses cards" -->
     <nav class="navbar">
-        <div class="logo">IT Education</div>
+        <div class="logo">🎓 IT Education</div>
         <ul class="nav-menu">
             <li><a href="#" class="nav-link">Home</a></li>
             <li><a href="#" class="nav-link">Courses</a></li>
             <li><a href="#" class="nav-link">Learning Path</a></li>
-            <li><a href="#" class="nav-link">Team</a></li>
+            <li><a href="#" class="nav-link">Tech Stack</a></li>
+            <li><a href="#" class="nav-link">Testimonials</a></li>
             <li><a href="#" class="nav-link">Contact</a></li>
         </ul>
     </nav>
+
     <div class="day-marker">Day 0: Initial Setup</div>
     <h1>IT Education Website - Git Bootcamp</h1>
 
@@ -245,7 +325,64 @@
             Start Learning Now
         </button>
     </section>
-    
+    <!-- COURSES SECTION - Day 2 (Alex - Feature Branch)
+         Git Command: git commit -m "Enhance header navbar and courses cards" -->
+    <section class="courses-section">
+        <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem;">
+            Our Git Bootcamp Courses
+        </h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            Structured learning paths designed to take you from beginner to expert
+        </p>
+        
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-image">
+                    📚
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Beginner</span>
+                    <h3 class="course-title">Git Fundamentals</h3>
+                    <p>Learn basic Git commands, commit workflow, and simple collaboration on main branch.</p>
+                    <div class="course-meta">
+                        <span>⏱️ 4 hours</span>
+                        <span>⭐ 4.8/5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-image">
+                    🌿
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Intermediate</span>
+                    <h3 class="course-title">Branching Mastery</h3>
+                    <p>Master feature branches, pull requests, merge conflicts, and team collaboration.</p>
+                    <div class="course-meta">
+                        <span>⏱️ 6 hours</span>
+                        <span>⭐ 4.9/5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-image">
+                    🚀
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Advanced</span>
+                    <h3 class="course-title">Advanced Git Workflows</h3>
+                    <p>Dive into rebase, stash, cherry-pick, and production deployment strategies.</p>
+                    <div class="course-meta">
+                        <span>⏱️ 5 hours</span>
+                        <span>⭐ 5.0/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER - Day 1 (Sanya)
          Git Command: git commit -m "Update footer text" -->
     <footer class="footer">
