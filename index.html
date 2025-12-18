@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Education - Git Training</title>
+    <style>
+        /* GLOBAL STYLES - Day 0
+           Created by: Sanya (Project Leader)
+           Git Command: git commit -m "Initial project structure with homepage layout" */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #0066cc;
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1rem;
+            border-bottom: 2px solid #0066cc;
+        }
+
+        .team-info {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .team-member {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #0066cc;
+            background: #f0f8ff;
+        }
+
+        .git-commands {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: monospace;
+        }
+
+        .day-marker {
+            background: #0066cc;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="day-marker">Day 0: Initial Setup</div>
+    <h1>IT Education Website - Git Bootcamp</h1>
+
+    <div class="team-info">
+        <h2>Team Setup - Day 0</h2>
+
+        <div class="team-member">
+            <h3>👑 Sanya - Project Leader</h3>
+            <p><strong>Task:</strong> Create project structure, initialize Git, connect to GitHub</p>
+            <p><strong>Git Commands Used:</strong></p>
+            <div class="git-commands">
+                mkdir it-education-site<br>
+                cd it-education-site<br>
+                git init<br>
+                git add .<br>
+                git commit -m "Initial project structure"<br>
+                git remote add origin [github-repo-url]<br>
+                git push -u origin main
+            </div>
+        </div>
+
+        <div class="team-member">
+            <h3>🦉 Alex - Team Member</h3>
+            <p><strong>Task:</strong> Will start on Day 1</p>
+            <p><strong>Git Commands:</strong> git clone, git pull</p>
+        </div>
+
+        <div class="team-member">
+            <h3>🦝 Tom - Team Member</h3>
+            <p><strong>Task:</strong> Will start on Day 1</p>
+            <p><strong>Git Commands:</strong> git clone, git pull</p>
+        </div>
+
+    </div>
+
+    <div class="team-info">
+        <h2>Project Structure Created:</h2>
+        <ul>
+            <li>📁 it-education-site/ (Project folder)</li>
+            <li>📄 index.html (Main HTML file)</li>
+            <li>🎨 style.css (Stylesheet)</li>
+            <li>📝 README.md (Project documentation)</li>
+            <li>📂 .git/ (Git repository)</li>
+        </ul>
+    </div>
+
+</body>
+</html>
