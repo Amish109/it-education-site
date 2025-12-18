@@ -123,6 +123,55 @@
             background: #0066cc;
             color: white;
         }
+        /* FOOTER - Day 1 (Sanya)
+           Git Command: git commit -m "Update footer text" */
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-radius: 8px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            color: #0099cc;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #555;
+            color: #999;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -197,5 +246,36 @@
             <li><a href="#" class="nav-link">Contact</a></li>
         </ul>
     </nav>
+    <!-- FOOTER - Day 1 (Sanya)
+         Git Command: git commit -m "Update footer text" -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>IT Education</h3>
+                <p>Learn Git through hands-on, project-based training.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Git Resources</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>Email: info@iteducation.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 IT Education Git Bootcamp. All rights reserved.</p>
+            <p>This project demonstrates Git workflow from Day 0 to Day 7.</p>
+        </div>
+    </footer>
 </body>
 </html>
