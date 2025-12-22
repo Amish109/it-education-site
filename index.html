@@ -463,6 +463,46 @@
             color: white;
             font-weight: bold;
         }
+        /* TECH STACK - Day 3 (Alex) */
+        .tech-stack {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .stack-item {
+            background: #f8f9fa;
+            padding: 1.5rem 1rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid #dee2e6;
+        }
+        
+        .stack-item:hover {
+            background: #0066cc;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        .stack-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stack-name {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
@@ -665,6 +705,47 @@
                         <p style="color: #666; font-size: 0.9rem;">Full Stack Developer</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- TECH STACK SECTION - Day 3 (Alex) -->
+    <section class="tech-stack">
+        <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem;">
+            Technologies You'll Master
+        </h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            Along with Git, gain experience with these essential web technologies
+        </p>
+        
+        <div class="stack-grid">
+            <div class="stack-item">
+                <div class="stack-icon">🌐</div>
+                <div class="stack-name">HTML5</div>
+            </div>
+            
+            <div class="stack-item">
+                <div class="stack-icon">🎨</div>
+                <div class="stack-name">CSS3</div>
+            </div>
+            
+            <div class="stack-item">
+                <div class="stack-icon">⚡</div>
+                <div class="stack-name">JavaScript</div>
+            </div>
+            
+            <div class="stack-item">
+                <div class="stack-icon">📊</div>
+                <div class="stack-name">Git</div>
+            </div>
+            
+            <div class="stack-item">
+                <div class="stack-icon">🚀</div>
+                <div class="stack-name">GitHub</div>
+            </div>
+            
+            <div class="stack-item">
+                <div class="stack-icon">💻</div>
+                <div class="stack-name">VS Code</div>
             </div>
         </div>
     </section>
