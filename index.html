@@ -63,29 +63,7 @@
             display: inline-block;
             margin-bottom: 1rem;
         }
-        /* HERO SECTION - Day 1 (Tom)
-           Git Command: git commit -m "Update hero section description" */
-        .hero-section {
-            background: linear-gradient(135deg, #0066cc, #0099cc);
-            color: white;
-            padding: 4rem 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            opacity: 0.9;
-        }
+       
         /* NAVIGATION - Day 1 (Alex)
            Git Command: git commit -m "Refine navbar labels" */
         /* IMPROVED NAVBAR - Day 2 (Alex) */
@@ -298,6 +276,89 @@
             margin-bottom: 1rem;
         }
 
+        /* HERO SLIDER - Day 2 (Sanya - Feature Branch)
+           Git Command: git commit -m "Refine hero slider content and layout structure" */
+        .hero-slider {
+            background: linear-gradient(135deg, #0066cc, #0099cc);
+            color: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slider-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .slider-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .slider-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .slider-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 2rem;
+        }
+        
+        .slider-indicator {
+            width: 12px;
+            height: 12px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .slider-indicator.active {
+            background: white;
+        }
+        
+        /* LAYOUT STRUCTURE IMPROVEMENTS - Day 2 (Sanya) */
+        .layout-demo {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .layout-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .layout-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .layout-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #0066cc;
+        }
+
     </style>
 </head>
 <body>
@@ -362,19 +423,72 @@
             <li>📂 .git/ (Git repository)</li>
         </ul>
     </div>
-    <!-- HERO SECTION - Day 1 (Tom)
-         Git Command: git commit -m "Update hero section description" -->
-    <section class="hero-section">
-        <h2 class="hero-title">Master Git in 7 Days!</h2>
-        <p class="hero-subtitle">
-            Join our intensive bootcamp to learn Git from basic commands to advanced workflows. 
-            Perfect for developers who want to collaborate effectively using version control.
-        </p>
-        <button style="background: white; color: #0066cc; border: none; padding: 1rem 2rem; 
-                      border-radius: 5px; font-weight: bold; cursor: pointer;">
-            Start Learning Now
-        </button>
+    <!-- HERO SLIDER - Day 2 (Sanya - Feature Branch)
+         Git Command: git commit -m "Refine hero slider content and layout structure" -->
+    <section class="hero-slider">
+        <div class="slider-content">
+            <h2 class="slider-title">Transform Your Git Skills in 7 Days</h2>
+            <p class="slider-subtitle">
+                Our intensive bootcamp takes you from basic commits to advanced workflows. 
+                Learn through hands-on projects, team collaboration, and real-world scenarios.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button style="background: white; color: #0066cc; border: none; padding: 1rem 2rem; 
+                              border-radius: 5px; font-weight: bold; cursor: pointer; display: flex; 
+                              align-items: center; gap: 0.5rem;">
+                    <span>🚀</span> Start Day 1
+                </button>
+                <button style="background: transparent; color: white; border: 2px solid white; 
+                              padding: 1rem 2rem; border-radius: 5px; font-weight: bold; cursor: pointer;">
+                    View Curriculum
+                </button>
+            </div>
+            
+            <div class="slider-indicators">
+                <div class="slider-indicator active"></div>
+                <div class="slider-indicator"></div>
+                <div class="slider-indicator"></div>
+                <div class="slider-indicator"></div>
+            </div>
+        </div>
     </section>
+    
+    <!-- LAYOUT STRUCTURE IMPROVEMENTS - Day 2 (Sanya) -->
+    <section class="layout-demo">
+        <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem;">
+            Website Structure Improvements
+        </h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            As Project Leader, I'm improving the overall layout structure for better maintainability
+        </p>
+        
+        <div class="layout-grid">
+            <div class="layout-item">
+                <div class="layout-icon">🏗️</div>
+                <h3>Modular Structure</h3>
+                <p>Each section is independent and reusable</p>
+            </div>
+            
+            <div class="layout-item">
+                <div class="layout-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>Works on mobile, tablet, and desktop</p>
+            </div>
+            
+            <div class="layout-item">
+                <div class="layout-icon">🎨</div>
+                <h3>Consistent Styling</h3>
+                <p>Uniform spacing, colors, and typography</p>
+            </div>
+            
+            <div class="layout-item">
+                <div class="layout-icon">⚡</div>
+                <h3>Performance</h3>
+                <p>Optimized for fast loading and smooth interactions</p>
+            </div>
+        </div>
+    </section>
+
     
     <!-- FOOTER - Day 1 (Sanya)
          Git Command: git commit -m "Update footer text" -->
