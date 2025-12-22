@@ -359,6 +359,110 @@
             color: #0066cc;
         }
 
+        /* LEARNING PATH - Day 3 (Tom) */
+        .learning-path {
+            background: white;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .path-steps {
+            max-width: 800px;
+            margin: 2rem auto 0;
+            position: relative;
+        }
+        
+        .path-steps::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 30px;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #0066cc, #0099cc);
+        }
+        
+        .path-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0066cc, #0099cc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-content {
+            padding-top: 0.5rem;
+        }
+        
+        .step-title {
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        /* TESTIMONIALS - Day 3 (Tom) */
+        .testimonials {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: #0066cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -489,6 +593,81 @@
         </div>
     </section>
 
+    <!-- LEARNING PATH SECTION - Day 3 (Tom) -->
+    <section class="learning-path">
+        <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem;">
+            7-Day Git Learning Journey
+        </h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            Follow this structured path from Git novice to version control expert
+        </p>
+        
+        <div class="path-steps">
+            <div class="path-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3 class="step-title">Days 0-1: Foundation</h3>
+                    <p>Git setup, basic commands (init, add, commit, push), simple workflow on main branch.</p>
+                </div>
+            </div>
+            
+            <div class="path-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3 class="step-title">Days 2-3: Branching</h3>
+                    <p>Feature branches, pull requests, merge conflicts, team collaboration strategies.</p>
+                </div>
+            </div>
+            
+            <div class="path-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3 class="step-title">Days 4-7: Advanced</h3>
+                    <p>Rebasing, stashing, cherry-picking, team simulations, and production workflows.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TESTIMONIALS SECTION - Day 3 (Tom) -->
+    <section class="testimonials">
+        <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem;">
+            Student Testimonials
+        </h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            Hear from developers who transformed their workflow
+        </p>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "The hands-on approach with real team simulation made all the difference. 
+                    I went from Git novice to confidently managing team repositories in one week!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JS</div>
+                    <div>
+                        <h4>Jamie Smith</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <p class="testimonial-text">
+                    "Learning Git through building this actual website was brilliant. 
+                    Each day's tasks corresponded to real Git commands."
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MR</div>
+                    <div>
+                        <h4>Maria Rodriguez</h4>
+                        <p style="color: #666; font-size: 0.9rem;">Full Stack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
     <!-- FOOTER - Day 1 (Sanya)
          Git Command: git commit -m "Update footer text" -->
