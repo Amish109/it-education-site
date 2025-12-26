@@ -12,14 +12,68 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        :root {
+            /* Primary Colors */
+            --primary-blue: #0066CC;
+            --primary-dark: #003366;
+            --primary-light: #3399FF;
+            --secondary-teal: #00CCCC;
+            --accent-orange: #FF9900;
+            
+            /* Neutral Colors */
+            --neutral-white: #FFFFFF;
+            --neutral-light: #F5F8FA;
+            --neutral-gray: #6C757D;
+            --neutral-dark: #343A40;
+            
+            /* Utility Colors */
+            --success-green: #28A745;
+            --warning-yellow: #FFC107;
+            --danger-red: #DC3545;
+            
+            /* Typography */
+            --font-heading: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            --font-body: 'Inter', 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+            
+            /* Spacing */
+            --spacing-xs: 8px;
+            --spacing-sm: 12px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --spacing-2xl: 48px;
+            --spacing-3xl: 64px;
+            
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-circle: 50%;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.2);
+            
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-normal: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-slow: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-            padding: 20px;
+            font-weight: 700;
+            color: var(--neutral-dark);
+            background-color: var(--neutral-light);
+            overflow-x: hidden;
         }
 
         h1 {
@@ -79,6 +133,7 @@
             flex-wrap: wrap;
         }
         
+        
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
@@ -112,11 +167,11 @@
         /* FOOTER - Day 1 (Sanya)
            Git Command: git commit -m "Update footer text" */
         .footer {
-            background: #333;
-            color: white;
+            color: var(--neutral-white);
             padding: 2rem;
-            margin-top: 4rem;
-            border-radius: 8px;
+            /* margin-top: 4rem; */
+            /* border-radius: 8px; */
+            background: var(--primary-dark);
         }
 
         .footer-content {
@@ -158,6 +213,8 @@
             color: #999;
             font-size: 0.9rem;
         }
+
+        
 
         /* COURSES SECTION - Day 2 (Alex - Feature Branch)
            Git Command: git commit -m "Enhance header navbar and courses cards" */
@@ -236,14 +293,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        
-        .section-title {
-            text-align: center;
-            color: #0066cc;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-        
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -477,7 +526,7 @@
         .section-title {
             text-align: center;
             color: #0066cc;
-            margin-bottom: 2rem;
+            margin-bottom: var(--spacing-sm);
             font-size: 2rem;
         }
         
@@ -569,6 +618,12 @@
         .contact {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
             color: var(--neutral-white);
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
         }
 
         .contact-container {
@@ -776,10 +831,48 @@
         .fade-in-delay-3 {
             animation-delay: 0.6s;
         }
+
+
+        /* New changes  */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-sm) var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            transition: all var(--transition-normal);
+            gap: var(--spacing-sm);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-teal));
+            color: var(--neutral-white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        .section-subtitle {
+            font-size: 18px;
+            text-align: center;
+            color: var(--neutral-gray);
+            max-width: 600px;
+            margin: 0 auto var(--spacing-2xl);
+        }
+        .section {
+            padding: var(--spacing-3xl) 0;
+        }
     </style>
 </head>
 <body>
-    <div class="day-marker">Day 0: Initial Setup</div>
+    <h1>IT Education Website - Git Bootcamp</h1>
+    <!-- <div class="day-marker">Day 0: Initial Setup</div> -->
 
     <!-- NAVIGATION - Day 1 (Alex)
          Git Command: git commit -m "Refine navbar labels" -->
@@ -797,7 +890,6 @@
         </ul>
     </nav>
 
-    <h1>IT Education Website - Git Bootcamp</h1>
 
     <!-- <div class="team-info">
         <h2>Team Setup - Day 0</h2>
@@ -942,7 +1034,63 @@
             </div>
         </div>
     </section>
-    
+     <!-- COURSES SECTION - Day 2 (Alex - Feature Branch)
+         Git Command: git commit -m "Enhance header navbar and courses cards" -->
+    <section class="courses-section">
+        <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem;">
+            Our Git Bootcamp Courses
+        </h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">
+            Structured learning paths designed to take you from beginner to expert
+        </p>
+        
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-image">
+                    📚
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Beginner</span>
+                    <h3 class="course-title">Git Fundamentals</h3>
+                    <p>Learn basic Git commands, commit workflow, and simple collaboration on main branch.</p>
+                    <div class="course-meta">
+                        <span>⏱️ 4 hours</span>
+                        <span>⭐ 4.8/5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-image">
+                    🌿
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Intermediate</span>
+                    <h3 class="course-title">Branching Mastery</h3>
+                    <p>Master feature branches, pull requests, merge conflicts, and team collaboration.</p>
+                    <div class="course-meta">
+                        <span>⏱️ 6 hours</span>
+                        <span>⭐ 4.9/5</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-image">
+                    🚀
+                </div>
+                <div class="course-content">
+                    <span class="course-category">Advanced</span>
+                    <h3 class="course-title">Advanced Git Workflows</h3>
+                    <p>Dive into rebase, stash, cherry-pick, and production deployment strategies.</p>
+                    <div class="course-meta">
+                        <span>⏱️ 5 hours</span>
+                        <span>⭐ 5.0/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- TESTIMONIALS SECTION - Day 3 (Tom) -->
     <section class="testimonials">
         <h2 style="text-align: center; color: #0066cc; margin-bottom: 1rem;">
@@ -1058,6 +1206,7 @@
             </div>
         </div>
     </section>
+    
     <!-- ============================================
          CONTACT FORM SECTION
          Day: 4 (Contact section + Form + Tailwind tweaks)
@@ -1131,6 +1280,7 @@
             </div>
         </div>
     </section>
+    
     <!-- FOOTER - Day 1 (Sanya)
          Git Command: git commit -m "Update footer text" -->
     <footer class="footer">
