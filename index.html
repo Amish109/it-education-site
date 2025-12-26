@@ -553,6 +553,98 @@
             font-weight: bold;
             font-size: 0.9rem;
         }
+        /* ============================================
+           CONTACT FORM SECTION STYLES
+           Day: 4 (Contact section + Form + Tailwind tweaks)
+           Person: Tom (Developer)
+           Task: Create feature/contact-form branch for contact section
+           Git Commands Used:
+             git switch main
+             git pull
+             git switch -c feature/contact-form
+             git add index.html
+             git commit -m "Style contact form and contact info"
+             git push -u origin feature/contact-form
+           ============================================ */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+            color: var(--neutral-white);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--spacing-2xl);
+            margin-top: var(--spacing-xl);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-md);
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-circle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+        }
+
+        .form-group {
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: var(--spacing-md);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--neutral-white);
+            font-family: var(--font-body);
+            font-size: 16px;
+            transition: all var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-teal);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
     </style>
 </head>
 <body>
@@ -835,7 +927,79 @@
             </div>
         </div>
     </section>
-
+    <!-- ============================================
+         CONTACT FORM SECTION
+         Day: 4 (Contact section + Form + Tailwind tweaks)
+         Person: Tom (Developer)
+         Branch: feature/contact-form
+         Git Command Reference: See CSS comments above
+    ============================================ -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Start Your Git Journey Today</h2>
+            <p class="section-subtitle fade-in-delay-1">
+                Ready to master version control? Contact us to join the next bootcamp batch
+            </p>
+            
+            <div class="contact-container">
+                <div class="contact-info fade-in-delay-1">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Our Location</h4>
+                            <p>123 Developer Street, Code City 10001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>info@iteducation.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in-delay-2">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" placeholder="Tell us about your goals..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- FOOTER - Day 1 (Sanya)
          Git Command: git commit -m "Update footer text" -->
     <footer class="footer">
