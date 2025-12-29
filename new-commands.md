@@ -20,8 +20,40 @@ Features included :
 "
 
 ## Show tag
-git tag -1
+git tag -l
 git show v0.1.0
 
 ## Push tag
 git push origin v0.1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+A pre-release is a version that’s not considered stable yet. It’s meant for:
+
+Testing
+
+Early access
+
+Feedback
+
+QA / internal users
+
+Examples:
+
+v1.0.0-beta
+
+v2.0.0-alpha
+
+v1.1.0-rc.1
