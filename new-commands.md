@@ -27,6 +27,13 @@ git show v0.1.0
 git push origin v0.1.0
 
 
+## rebase
+git log --oneline --graph --all   
+- shows structure of branches in a graphic way
+
+- from child branch
+* git rebase main
+* git rebase --continue (after solving conflicts continuing rebase)
 
 
 
@@ -57,3 +64,4 @@ v1.0.0-beta
 v2.0.0-alpha
 
 v1.1.0-rc.1
+
